@@ -1,7 +1,8 @@
 ---
+
 - name: Creating groups
   group: name="{{item}}"
-  with_items: groups_to_create
+  with_items: users_groups_to_create
   tags: ['users','groups','configuration']
 
 - name: Per-user group creation
@@ -40,3 +41,5 @@
   with_items: users_deleted
   when: users_create_per_user_group
   tags: ['users','configuration']
+
+- name: Ensure sudoers is set up
