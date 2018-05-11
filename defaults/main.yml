@@ -16,4 +16,10 @@ users_create_homedirs: true
 # Lists of users to create and delete (see this role's README for structures)
 users: []
 users_deleted: []
+
+# List of groups to create
+# Example:
+#   groups_to_create:
+#     - name: developers
+#       gid: 10000
 users_groups_to_create: []
